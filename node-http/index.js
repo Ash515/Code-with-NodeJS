@@ -17,7 +17,7 @@ const server=http.createServer((req,res)=>{
         if(fileext=='.html'){
             fs.exists(filepath,(exists)=>{
                     if(!exists){
-                        res.statuscode=202;
+                        res.statuscode=404;
                         res.setHeader('content-Type','text/html');
                         res.end('<html><body><h1>Error 404:'+fileUrl+' not found </h1></body></html>');
 
